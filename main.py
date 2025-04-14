@@ -94,7 +94,7 @@ user_input = user_input_form()
 if user_input:
     sample = prepare_patient_sample_from_session().reshape(1, -1)
     with st.spinner("🔄 Running Monte Carlo Simulation... Please wait"):
-        preds, mean, std = predict_with_mc_dropout(model_nnf_dropout_balanced, sample,n_iterations=10_000
+        preds, mean, std = predict_with_mc_dropout(model_nnf_dropout_balanced, sample,n_iterations=1000
         )
     st.success("✅ Simulation complete!")
 
@@ -120,7 +120,7 @@ if st.button("Show Consequential Features (Gradient-Based)"):
         #_,_,_,gradient_grid=predict_with_mc_dropout_and_grads(model_nnf_dropout_balanced, sample)
         with st.spinner("🔄 Running Monte Carlo Simulation... Please wait"):
             predictions, mean_prediction, std_prediction, gradient_grid = predict_with_mc_dropout_and_grads(
-                model_nnf_dropout_balanced, sample, n_iterations=10_000
+                model_nnf_dropout_balanced, sample, n_iterations=1000
             )
         st.success("✅ Simulation complete!")
 
