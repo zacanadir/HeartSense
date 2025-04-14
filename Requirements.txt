@@ -1,0 +1,19 @@
+# Core libraries
+numpy
+pandas
+scikit-learn
+joblib
+os  # built-in, doesn't need to be listed
+
+# Deep learning
+tensorflow
+
+# Visualization
+plotly
+shap
+
+# Statistical tools
+scipy
+
+# App framework
+streamlit
