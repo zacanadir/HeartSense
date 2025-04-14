@@ -1,17 +1,17 @@
-import streamlit as st
-from utils.preprocess import load_data, preprocessor
-from model import load_nnf_model,load_other_model,load_dropout_model,load_dropout_weights_model
-from sklearn.model_selection import train_test_split
-from tensorflow.keras import layers, Model, Input
-from utils.forms import user_input_form,prepare_patient_sample_from_session
-from utils.utilities import predict_with_mc_dropout,compute_feature_gradients,predict_with_mc_dropout_and_grads
-from utils.figures import plot_kde_mc_dropout,plot_accuracy_analysis,plot_bias_analysis
 import pandas as pd
-import plotly.express as px
-import shap
 import numpy as np
 import tensorflow as tf
+import streamlit as st
+from sklearn.model_selection import train_test_split
+from utils.utilities import predict_with_mc_dropout,compute_feature_gradients,predict_with_mc_dropout_and_grads
+from utils.figures import plot_kde_mc_dropout,plot_accuracy_analysis,plot_bias_analysis
 import plotly.graph_objects as go
+from utils.preprocess import load_data, preprocessor
+from model import load_nnf_model,load_other_model,load_dropout_model,load_dropout_weights_model
+from utils.forms import user_input_form,prepare_patient_sample_from_session
+
+
+
 
 st.set_page_config(
     page_title="HeartSense: Uncertainty-Aware Heart Disease Prediction & Explanation",
