@@ -7,3 +7,4 @@ HeartSense is an interactive Streamlit app that combines predictive modeling, fa
 	•	Consequential Feature Identification: Use gradient-based analysis to uncover which patient features most influence disease risk — with 95% confidence intervals for controllable, continuous variables.
 🧠 Why It Matters
 Rather than treating model predictions as fixed, HeartSense embraces uncertainty and interpretability to offer a more nuanced, actionable view of health risk — empowering users and practitioners to focus on what matters most for each individual case.
+Developed by: Zakaria Nadir (zacanadir@gmail.com)
